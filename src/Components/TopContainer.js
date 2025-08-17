@@ -7,6 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/fontawesome-free-solid'
 import "./TopContainer.css"
 
+
+
 function TopContainer() {
   const [input, setInput] = useState("");
   const [searchResult, setSearchResult] = useState(null);
@@ -97,13 +99,12 @@ function TopContainer() {
     <div className="topContainer">
       <div className="navbar">
         <ul className="largeview">
-          <li id="list">Home</li>
+          <li id="list"><a href='/'>Home</a></li>
           <li id="list"><a href='/about'>About Us</a></li>
-          <li id="list">Services</li>
-          <li id="list">Careers</li>
-          <li id="list">Contact</li>
-          <li id="list">Blogs</li>
-          <li id="list">Faq</li>
+          <li id="list"><a href='/services'>Services</a></li>
+          <li id="list"><a href='/contact'>Contact</a></li>
+          <li id="list"><a href='/blogs'>Blogs</a></li>
+          <li id="list"><a href="/faq">Faq</a></li>
         </ul>
 
         <div className="mobview">
@@ -113,7 +114,6 @@ function TopContainer() {
               <li id="open">Home</li>
               <li id="open"><a href='/about'>About Us</a></li>
               <li id="open">Services</li>
-              <li id="open">Careers</li>
               <li id="open">Contact</li>
               <li id="open">Blogs</li>
               <li id="open">Faq</li>
@@ -147,8 +147,9 @@ function TopContainer() {
 
         <div className="profileContainer">
           <a href="/pricing">
-            <button className="go-pro-btn">Go Pro</button>
+            <button className="go-pro-btn" style={{ backgroundColor: '#23af90', color: '#fff' }}>Premium</button>
           </a>
+          
           <div className="notification-container" ref={dropdownRef}>
             <div className="profileIcon" onClick={toggleDropdown}>
               <FaBell />
@@ -187,7 +188,7 @@ function TopContainer() {
             <img src={women} alt="" />
           </div>
 
-          <p className="profileName">Sugam Arora</p>
+          <p className="profileName">Vansh Garg</p>
           <a className="menuChevron" id="menuChevron" onClick={toggleDrop}>
             <FaChevronDown />
           </a>

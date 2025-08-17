@@ -1,26 +1,26 @@
 menu {
   width: 100px;
   height: auto;
-  background: #19162c;
+  background: #ffffff; /* clean white sidebar */
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 20px rgba(35, 175, 144, 0.3); /* mint glow */
   position: sticky;
   top: 0;
+  border-radius: 0 15px 15px 0; /* smooth right edge */
+  transition: all 0.3s ease-in-out;
 }
 
-menu .logo
-{
+menu .logo {
   cursor: pointer;
   opacity: 1;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-menu .logo:hover
-{
+menu .logo:hover {
   opacity: 0.7;
-  transition: all 0.4s ease-in-out;
+  transform: scale(1.05);
 }
 
 menu img {
@@ -40,64 +40,66 @@ menu ul li {
   list-style: none;
   margin: 20px 0;
   position: relative;
-  color: #8c8a95;
   width: 100%;
   text-align: center;
 }
 
 menu ul li a {
-  font-size: 24px;
-  color: #8c8a95;
+  font-size: 22px;
+  color: #444444; /* dark text for contrast */
   text-decoration: none;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
   position: relative;
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 menu ul li a::before {
   position: absolute;
   content: "";
-  top: 5px;
-  left: -10px;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
   width: 0px;
-  height: 20px;
-  background: #0db5cb;
+  height: 10px;
+  background: #23af90; /* mint accent */
   border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
-menu ul li:hover a::before {
-  width: 20px;
-  transition: all 0.3s;
-}
-
+menu ul li:hover a::before,
 menu ul li.active a::before {
-  width: 20px;
-  transition: all 0.3s;
+  width: 10px;
 }
 
 menu ul li.active a {
-  color: #0db5cb;
+  color: #23af90;
+  font-weight: 600;
+  background: rgba(35, 175, 144, 0.1);
 }
 
 menu ul li:hover a {
-  color: #0db5cb;
+  color: #23af90;
+  background: rgba(35, 175, 144, 0.08);
 }
 
 .tooltip {
   visibility: hidden;
-  width: 80px;
-  background-color: #2e2758;
+  width: 90px;
+  background-color: #23af90; /* mint tooltip */
   color: #fff;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 8px 8px;
-  font-size: 15px;
+  font-size: 14px;
   position: absolute;
   z-index: 1;
   bottom: 125%;
   left: 50%;
-  margin-left: -30px;
+  margin-left: -45px;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s ease;
 }
 
 .tooltip::after {
@@ -106,9 +108,9 @@ menu ul li:hover a {
   top: 100%;
   left: 50%;
   margin-left: -5px;
-  border-width: 5px;
+  border-width: 6px;
   border-style: solid;
-  border-color: #231e42 transparent transparent transparent;
+  border-color: #23af90 transparent transparent transparent;
 }
 
 menu ul li:hover .tooltip {
@@ -125,27 +127,31 @@ menu ul li:hover .tooltip {
     min-width: 68px;
     width: auto;
   }
-  menu ul{
+
+  menu ul {
     display: none;
     position: relative;
     top: 50px;
     right: 0;
     width: 100%;
-    background-color: #19162c;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 20px rgba(35, 175, 144, 0.2);
   }
-  menu img{
+
+  menu img {
     position: absolute;
-    left: 1px;
+    left: 5px;
     padding: 0;
   }
-  menu ul li{
+
+  menu ul li {
     display: block;
     padding: 10px;
     border-bottom: 1px solid #eee;
   }
-  .logo{
+
+  .logo {
     cursor: pointer;
   }
 }

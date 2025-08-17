@@ -7,7 +7,6 @@
 }
 
 .maincontainer .left {
-  width: calc(100% - 30%);
   overflow-y: scroll;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -17,10 +16,10 @@
 }
 
 .maincontainer .left .banner {
-  height: 260px;
-  background: #0cb2cf;
+  height: 360px;
+  background: #23af90;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 20px #23af90;
   position: relative;
 }
 
@@ -39,7 +38,7 @@
 
 .maincontainer .left .banner .textContainer h2 {
   font-size: 2.5rem;
-  color: #0db5cb;
+  color: #23af90;
   margin: 5px 0;
 }
 
@@ -61,15 +60,15 @@
 
 .maincontainer .left .banner .textContainer .bid p span {
   display: block;
-  color: #0db5cb;
-  transition: color 0.3 sec;
+  color: #23af90;
+  transition: color 0.3s;
 }
 .maincontainer .left .banner .textContainer .bid p span :hover {
   color: white;
 }
 
 .maincontainer .left .cards {
-  background: #19162c;
+  background: white;
   padding: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
   margin-top: 20px;
@@ -109,10 +108,14 @@
 .card{  
   display: flex;
   flex-wrap: wrap;
+  margin-left: 20px;
+  gap: 20px;
 }
 .card_main {
+  width: 400px;
   height: 365px;
 }
+
 .card_main_img {
   width: 100%;
   height: 200px;
@@ -120,14 +123,16 @@
 .maincontainer .left .cards main .card_main {
   background: #252041;
   border-radius: 10px;
-  max-width: 260px;
+  max-width: 400px;
   padding-bottom: 20px;
   margin: 15px 10px;
+  gap: 30px;
 }
 
 .maincontainer .left .cards main .card_main .card_main_img {
   max-width: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .maincontainer .left .cards main .card_main .card_main_name {

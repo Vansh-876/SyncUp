@@ -1,121 +1,120 @@
+/* ===========================
+   About Us Section
+=========================== */
+
+.about-intro {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.about-intro h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.about-intro p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
 .about-us {
-    display: block;
-    margin: auto;
-    width: 52.5rem;
-    height: 100%;
-    background-color: white;
+  max-width: 100%;
+  margin: auto;
+  padding: 4rem 1rem;
+  height: auto;
+  background: #ffffff;
 }
 
 .about-us-heading {
-    text-align: center;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    color: #FFFFCC;
-    font-size: 50px;
-}
-.about-us-block {
-    display: flex;
-    justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0f172a; /* dark slate */
+  position: relative;
 }
 
-
-.about-us-community, .about-us-product, .about-us-event, .about-us-location {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 35%;
-    height: 14rem;
-    border: 1px solid rgba(206, 212, 218, 1);
-    border-radius: 8px;
-    margin-bottom: 21px;
-    color: #F5F5DC;
+.about-us-heading::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #06b6d4; /* teal accent */
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
 }
 
-.about-us-community {
-    border: 2px solid rgba(128, 100, 162, 1);
+/* Grid for cards */
+.about-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
-.about-us-community:hover {
-    background: rgba(128, 100, 162, 1);
-    color: white;
+/* Card Styles */
+.about-us-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  height: 350px;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.about-us-location {
-    border: 2px solid rgba(128, 100, 162, 1);
+.about-us-card:hover {
+  transform: translateY(-6px);
+  border-color: #06b6d4;
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.15);
 }
 
-.about-us-location:hover {
-    background: rgba(128, 100, 162, 1);
-    color: white;
+/* Card Header */
+.about-us-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.about-us-product {
-    border: 2px solid rgba(128, 100, 162, 1);
+.about-us-icon {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.about-us-product:hover {
-    background: rgba(128, 100, 162, 1);
-    color: white;
+.about-us-card:hover .about-us-icon {
+  transform: scale(1.1);
 }
 
-.about-us-event {
-    border: 2px solid rgba(128, 100, 162, 1);
+.about-us-card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f172a;
 }
 
-.about-us-event:hover {
-    background: rgba(128, 100, 162, 1);
-    color: white;
+/* Paragraph */
+.about-us-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
 }
 
-.about-us-blk-text {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin-top: 1rem;
-}
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  .about-us {
+    padding: 2rem 1rem;
+  }
 
-.about-us-blk-para {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .about-us-block {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-us-community, .about-us-event, .about-us-location, .about-us-product {
-        width: 90%;
-        height: 100%;
-        padding: 0.5rem;
-    }
-}
-
-@media only screen and (max-width: 1020px) {
-    .about-us-block {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-us-community, .about-us-event, .about-us-location, .about-us-product {
-        width: 90% !important;
-        height: 100%;
-        padding: 0.5rem;
-    }
-}
-
-@media only screen and (max-width: 1250px) {
-    .about-us-community, .about-us-event, .about-us-location, .about-us-product {
-        width: 45%;
-    }
+  .about-us-heading {
+    font-size: 2.2rem;
+  }
 }
