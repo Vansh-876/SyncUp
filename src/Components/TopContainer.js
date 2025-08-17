@@ -102,7 +102,7 @@ function TopContainer() {
           <li id="list"><a href='/'>Home</a></li>
           <li id="list"><a href='/about'>About Us</a></li>
           <li id="list"><a href='/services'>Services</a></li>
-          <li id="list"><a href='/contact'>Contact</a></li>
+          <li id="list"><a href='/contacts'>Contact</a></li>
           <li id="list"><a href='/blogs'>Blogs</a></li>
           <li id="list"><a href="/faq">Faq</a></li>
         </ul>

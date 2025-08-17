@@ -1,9 +1,14 @@
+.box {
+    background-color: white;
+}
+
 .containerContact {
     width: 95vw;
     margin: auto;
     display: grid;
     grid-template-columns: 35vw 50vw;
-    color: white;
+    text-decoration: none;
+    color: #0f172a;
     gap: 20px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -22,18 +27,17 @@
 
 .box1, .box2, .box3, .box4 {
     padding: 20px;
-    background-color: #1e1b3a; 
+    background-color:#23af90; 
     border-radius: 10px;
 }
 .box1:hover, .box2:hover, .box3:hover, .box4:hover {
-    background-color: #2a2747;
+    background-color: #23af90;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
     outline: 3px solid white;
     border-radius: 15px;
     transition: 0.1s ease-in-out;
 }
 .box1 h2, .box2 h2, .box3 h2, .box4 h2, .form h2 {
-    text-decoration: underline;
     margin-bottom: 10px;
 }
 
@@ -46,7 +50,7 @@
     padding: 20px;
     border: 3px solid white;
     border-radius: 15px;
-    background-color: #2a2747; 
+    background-color: #23af90; 
 }
 
 .form h2 {
@@ -72,9 +76,9 @@
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #23af90;
     font-size: medium;
-    background-color: #3a3756; 
+    background-color:white; 
     color: white;
 }
 
@@ -99,7 +103,7 @@
     padding: 10px;
     height: 100px;
     resize: none;
-    background-color: #3a3756; 
+    background-color: white; 
     color: white;
 }
 .contentInside a{
